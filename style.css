@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: white;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 25px;
+  background: linear-gradient(to right, #111, #222);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+header p {
+  color: #aaa;
+}
+
+/* CATEGORÍAS */
+.categories {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 15px;
+  background: #050505;
+}
+
+.categories button {
+  flex: none;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #222;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.categories button:hover {
+  background: #ffcc00;
+  color: black;
+}
+
+/* PRODUCTOS */
+main {
+  padding: 20px;
+}
+
+#title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #111;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #000;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card p {
+  color: #bbb;
+}
+
+.card button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #ffcc00;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: white;
+}
+
+/* CARRITO */
+.cart {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  padding: 15px;
+  border-top: 2px solid #222;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid #333;
+}
+
+/* BOTONES */
+.btnOrder {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #00ff66;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnClear {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  background: red;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* QR */
+.qr {
+  margin-top: 250px;
+  text-align: center;
+}
+
+.qr img {
+  width: 160px;
+  margin-top: 10px;
+}
+
+/* BOTÓN WHATSAPP */
+.wspFloat {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: #00ff66;
+  color: black;
+  font-size: 28px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+}

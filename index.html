@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutto per Tutti 🍔</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>🍔 Tutto per Tutti</h1>
+    <p>Fast Food Premium — San Juan</p>
+  </header>
+
+  <!-- MENU CATEGORÍAS -->
+  <section class="categories">
+    <button onclick="showCategory('Pizzas')">🍕 Pizzas</button>
+    <button onclick="showCategory('Hamburguesas')">🍔 Hamburguesas</button>
+    <button onclick="showCategory('Lomitos')">🥪 Lomitos</button>
+    <button onclick="showCategory('Milanesas')">🍗 Milanesas</button>
+    <button onclick="showCategory('Postres')">🍰 Postres</button>
+    <button onclick="showCategory('Bebidas')">🥤 Bebidas</button>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <main>
+    <h2 id="title">📌 Menú Completo</h2>
+    <div id="products" class="products"></div>
+  </main>
+
+  <!-- CARRITO -->
+  <aside class="cart">
+    <h2>🛒 Tu Pedido</h2>
+    <ul id="cartItems"></ul>
+    <h3>Total: $<span id="total">0</span></h3>
+
+    <button class="btnOrder" onclick="sendWhatsApp()">
+      Pedir por WhatsApp
+    </button>
+
+    <button class="btnClear" onclick="clearCart()">
+      Vaciar Carrito
+    </button>
+  </aside>
+
+  <!-- QR -->
+  <section class="qr">
+    <h2>📲 Escaneá y pedí</h2>
+    <img src="qr.png" alt="QR WhatsApp" />
+    <p>Pedido directo al WhatsApp</p>
+  </section>
+
+  <!-- BOTÓN FLOTANTE -->
+  <a class="wspFloat" href="https://wa.me/542644517816" target="_blank">
+    💬
+  </a>
+
+  <script src="script.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+
+</body>
+</html>
